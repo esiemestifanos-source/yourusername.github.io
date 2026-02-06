@@ -204,3 +204,4 @@ function changeQty(i, delta){
 function checkout(){
   alert("Stripe/PayPal integration next 🚀");
 }
+document.documentElement.style.scrollBehavior = "smooth";

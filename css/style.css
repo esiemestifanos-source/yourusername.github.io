@@ -497,3 +497,195 @@ button:hover {
     padding: 12px 18px;
   }
 }
+/* =========================================
+   📱 2026 MOBILE-FIRST PREMIUM UPGRADE
+   put at very bottom of CSS
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* =====================
+     GLOBAL
+  ===================== */
+  body{
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,h2,h3{
+    line-height: 1.2;
+  }
+
+
+  /* =====================
+     NAVBAR → APP STYLE
+  ===================== */
+  .navbar{
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+
+    width: 95%;
+    margin: auto;
+
+    padding: 14px 18px;
+    border-radius: 16px;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    backdrop-filter: blur(20px);
+  }
+
+  .brand-logo{
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-text{
+    font-size: 20px;
+  }
+
+  .nav{
+    gap: 18px;
+  }
+
+  .nav-link{
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+
+  /* push content below fixed navbar */
+  .hero,
+  .grid,
+  .product-page,
+  .cart-container{
+    margin-top: 90px;
+  }
+
+
+  /* =====================
+     HERO
+  ===================== */
+  .hero{
+    padding: 60px 20px;
+  }
+
+
+  /* =====================
+     PRODUCTS → 1 COLUMN
+  ===================== */
+  .grid{
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .card{
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .card img{
+    height: 180px;
+  }
+
+  .card button{
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+
+  /* =====================
+     PRODUCT PAGE STACKED
+  ===================== */
+  .product-page{
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .product-page img{
+    width: 85%;
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .product-page button{
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+  }
+
+
+  /* =====================
+     CART → APP STYLE LIST
+  ===================== */
+  .cart-container{
+    padding: 16px;
+  }
+
+  .cart-card{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .cart-info{
+    width: 100%;
+  }
+
+  .qty-controls{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .qty-controls button{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .item-total{
+    align-self: flex-end;
+    font-size: 16px;
+  }
+
+
+  /* =====================
+     STICKY CHECKOUT BAR
+  ===================== */
+  .cart-footer{
+    position: sticky;
+    bottom: 0;
+
+    background: rgba(20,20,20,.95);
+    backdrop-filter: blur(12px);
+
+    padding: 16px;
+    border-top: 1px solid #222;
+
+    margin-top: 25px;
+  }
+
+  .checkout-btn{
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+
+  /* =====================
+     BUTTONS = BIG TOUCH
+  ===================== */
+  button{
+    min-height: 44px; /* Apple recommended */
+  }
+
+}

@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>GearSouls | Shop</title>
-<link rel="stylesheet" href="./css/style.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Futuristic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
 
+<!-- =========================
+      NAVBAR
+========================= -->
 <header class="navbar">
 
   <a href="index.html" class="brand">
@@ -17,25 +28,96 @@
 
   <nav class="nav">
     <a href="shop.html" class="nav-link">Shop</a>
-
-    <a href="cart.html" class="nav-link cart-btn">
-      Cart
+    <a href="cart.html" class="nav-link">Cart
       <span id="cart-count" class="cart-count">0</span>
     </a>
+
+    <!-- user area -->
+    <button id="openAuth" class="auth-btn">Account</button>
   </nav>
 
 </header>
 
 
 
+<!-- =========================
+      HERO
+========================= -->
 <section class="hero">
-  <h1>Forged in Steel. Powered by Souls.</h1>
+  <h1 class="hero-title">Forged in Steel. Powered by Souls.</h1>
+  <p class="hero-sub">Cyberpunk Gear • Premium Merch • Built for Legends</p>
 </section>
 
-<h2 class="title">Products</h2>
 
-<div class="grid" id="products"></div>
 
+<!-- =========================
+      PRODUCTS
+========================= -->
+<section class="shop-section">
+
+  <h2 class="title">Products</h2>
+
+  <div class="grid" id="products">
+    <!-- app.js injects products here -->
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+      AUTH MODAL
+========================= -->
+<div class="modal" id="authModal">
+
+  <div class="modal-box">
+
+    <h2>Account</h2>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <button onclick="resetPassword()">Reset Password</button>
+    <button onclick="changePassword()">Change Password</button>
+    <button onclick="logout()">Logout</button>
+
+    <p id="userStatus" class="user-status">Not logged in</p>
+
+    <button id="closeAuth" class="close-btn">Close</button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+      SCRIPTS
+========================= -->
+
+<!-- Your shop logic -->
 <script src="app.js"></script>
+
+<!-- Firebase auth -->
+<script type="module" src="firebase.js"></script>
+
+<!-- Small modal control -->
+<script>
+const modal = document.getElementById("authModal");
+
+document.getElementById("openAuth").onclick = () =>
+  modal.classList.add("show");
+
+document.getElementById("closeAuth").onclick = () =>
+  modal.classList.remove("show");
+
+window.onclick = e => {
+  if (e.target === modal) modal.classList.remove("show");
+};
+</script>
+
+
 </body>
 </html>

@@ -689,3 +689,370 @@ button:hover {
   }
 
 }
+/* =========================================
+   🚀 2026 FUTURISTIC PREMIUM UPGRADE
+========================================= */
+
+
+/* ========= GLOBAL SCALE FIX ========= */
+/* makes everything larger automatically on phones */
+@media (max-width:768px){
+  html{
+    font-size:18px;
+  }
+}
+
+
+/* ========= SMOOTH FEEL ========= */
+*{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 20% 10%, #1a1a1a 0%, #0f0f0f 60%);
+}
+
+
+/* =====================================
+   ✨ FLOATING GLASS NAVBAR
+===================================== */
+
+.navbar{
+  position:sticky;
+  top:12px;
+
+  backdrop-filter: blur(20px);
+  background: rgba(20,20,20,.65);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.6);
+
+  animation: navFloat .6s ease;
+}
+
+@keyframes navFloat{
+  from{transform:translateY(-20px); opacity:0}
+  to{transform:none; opacity:1}
+}
+
+
+/* =====================================
+   🔥 HERO GLOW
+===================================== */
+
+.hero{
+  padding:120px 20px;
+
+  background:
+    radial-gradient(circle at center,
+      #181818 0%,
+      #0f0f0f 70%);
+
+  animation: fadeUp 1s ease;
+}
+
+.hero h1{
+  font-size:42px;
+  letter-spacing:1px;
+
+  text-shadow:
+    0 0 20px rgba(255,255,255,.15);
+}
+
+
+/* =====================================
+   🧊 3D PRODUCT CARDS
+===================================== */
+
+.card{
+  border-radius:18px;
+
+  background:
+    linear-gradient(145deg,#1c1c1c,#121212);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.55);
+
+  transform-style: preserve-3d;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+  animation: fadeUp .6s ease both;
+}
+
+/* stagger animation */
+.card:nth-child(2){animation-delay:.08s}
+.card:nth-child(3){animation-delay:.16s}
+.card:nth-child(4){animation-delay:.24s}
+
+.card:hover{
+  transform:
+    translateY(-10px)
+    rotateX(6deg)
+    rotateY(-6deg)
+    scale(1.03);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.75);
+}
+
+/* image pop */
+.card img{
+  transition: transform .4s ease;
+}
+
+.card:hover img{
+  transform: scale(1.07) translateZ(20px);
+}
+
+
+/* =====================================
+   ✨ GLOW BUTTONS
+===================================== */
+
+button{
+  font-weight:600;
+  border-radius:10px;
+
+  background:white;
+  color:black;
+
+  transition:.25s;
+}
+
+button:hover{
+  transform: translateY(-2px);
+  box-shadow:0 6px 18px rgba(255,255,255,.25);
+}
+
+
+/* =====================================
+   📱 MOBILE = BIG + APP STYLE
+===================================== */
+
+@media (max-width:768px){
+
+  /* ONE COLUMN */
+  .grid{
+    grid-template-columns: 1fr;
+    padding:20px;
+  }
+
+  /* bigger cards */
+  .card{
+    padding:22px;
+  }
+
+  .card img{
+    height:200px;
+  }
+
+  /* bigger tap buttons */
+  button{
+    width:100%;
+    padding:16px;
+    font-size:16px;
+  }
+
+  /* hero bigger */
+  .hero{
+    padding:90px 20px;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+}
+
+
+/* =====================================
+   🔥 CART APP STYLE
+===================================== */
+
+.cart-card{
+  backdrop-filter: blur(14px);
+  background: rgba(25,25,25,.8);
+
+  border-radius:16px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.5);
+
+  transition:.25s;
+}
+
+.cart-card:hover{
+  transform: translateY(-4px);
+}
+
+
+/* sticky checkout like real apps */
+.cart-footer{
+  position: sticky;
+  bottom: 0;
+
+  background: rgba(15,15,15,.95);
+  backdrop-filter: blur(10px);
+
+  padding:18px;
+}
+
+
+/* =====================================
+   ✨ ANIMATIONS
+===================================== */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+/* ======================================================
+   🚀 ULTRA FUTURISTIC 2026 VISUAL ENGINE
+   (drop-in magic)
+====================================================== */
+
+
+/* ===============================
+   🌌 LIVE ANIMATED BACKGROUND
+=============================== */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 20% 30%, #1c1c1c 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, #1a1a1a 0%, transparent 45%);
+
+  animation: bgMove 18s linear infinite alternate;
+
+  z-index:-2;
+}
+
+@keyframes bgMove{
+  from{ transform: translateY(-30px) }
+  to{ transform: translateY(30px) }
+}
+
+
+/* ===============================
+   ✨ GLASS UI EVERYWHERE
+=============================== */
+
+.card,
+.navbar,
+.cart-card,
+.cart-footer{
+  backdrop-filter: blur(18px);
+  background: rgba(20,20,20,.65);
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+
+/* ===============================
+   🔥 SOFT GLOW TEXT
+=============================== */
+
+h1,h2,h3{
+  text-shadow: 0 0 20px rgba(255,255,255,.12);
+}
+
+
+/* ===============================
+   💎 FLOATING CARDS DEPTH
+=============================== */
+
+.card{
+  transform-style: preserve-3d;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover{
+  transform: translateY(-12px) scale(1.04);
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.7);
+}
+
+
+/* ===============================
+   🚀 BUTTON GLOW
+=============================== */
+
+button{
+  position:relative;
+  overflow:hidden;
+}
+
+button::after{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background: radial-gradient(circle, rgba(255,255,255,.35), transparent 60%);
+  opacity:0;
+  transition:.4s;
+}
+
+button:hover::after{
+  opacity:1;
+}
+
+
+/* ===============================
+   ✨ SCROLL REVEAL BASE
+=============================== */
+
+.reveal{
+  opacity:0;
+  transform: translateY(40px);
+  transition: .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+
+/* ===============================
+   🌠 PARTICLE CANVAS
+=============================== */
+
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+
+
+/* ===============================
+   📱 MOBILE BIGGER + PREMIUM
+=============================== */
+
+@media (max-width:768px){
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .card{
+    padding:22px;
+    border-radius:20px;
+  }
+
+  button{
+    padding:16px;
+    font-size:16px;
+  }
+
+}
